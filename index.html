@@ -1,116 +1,84 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alura Geek - El desafio final</title>
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Lato:wght@300&family=Open+Sans&family=Oswald&family=Poppins:wght@200;500;700&family=Press+Start+2P&family=REM&family=Roboto+Condensed&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
-    
+    <meta name="viewport" content="width=A, initial-scale=1.0">
+    <title>Catalogo de Ventas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="productos_add.css">
 </head>
-<body>
-    
-        <header class="header">
-            <img class="header__logo" src="./img/image 1.png" alt="logo aluraGeep">
-            <h3 class="title">AluraGeek</h3>
-           
-            
-        </header>
 
-        <main>
-            
-              
-            <div class="contenedor block_principal">
-                
-                <h2>Mis Productos:</h2>
-                <a class="link_producto" href="./descripcion_productos.html">
-                <img src="./img/unsplash_6FDXGY9J6y4.png" alt="">
-                <div>
-                    <ul>
-                        <li class="nombre_producto">Producto XYZ</li>
-                        <li class="precio_producto">$ 60,00</li>
-                        <li>Ver producto</li>
-                    </ul>   
-                </div>
-                </a>
-            </div>
-            <div class="contenedor block_principal">
-                
-                <a class="link_producto" href="./descripcion_productos.html">
-                <img src="./img/unsplash_epRFE_hBNjo.png" alt="">
-                <div>
-                    <ul>
-                        <li class="nombre_producto">Producto XYZ</li>
-                        <li class="precio_producto">$ 60,00</li>
-                        <li>Ver producto</li>
-                    </ul>   
-                </div>
-                </a>
-            </div>
-            <div class="contenedor block_principal">
-                <a class="link_producto" href="./descripcion_productos.html">
-                <img src="./img/unsplash_KeGToDVN0l4.png" alt="">
-                <div>
-                    <ul>
-                        <li class="nombre_producto">Producto XYZ</li>
-                        <li class="precio_producto">$ 60,00</li>
-                        <li>Ver producto</li>
-                    </ul>   
-                </div>
-                </a>
-            </div>
-            
-            <div class="contenedor block_principal">
-                
-                <a class="link_producto" href="./descripcion_productos.html">
-                <img src="./img/unsplash_4OHkK555s1A.png" alt="">
-                <div>
-                    <ul>
-                        <li class="nombre_producto">Producto XYZ</li>
-                        <li class="precio_producto">$ 60,00</li>
-                        <li>Ver producto</li>
-                    </ul>  
-                </div>
-                </a>
-            </div>
-            <div class="contenedor block_principal">
-                <a class="link_producto" href="./descripcion_productos.html">
-                <img src="./img/unsplash_R8L1l9RN198.png" alt="">
-                <div>
-                    <ul>
-                        <li class="nombre_producto">Producto XYZ</li>
-                        <li class="precio_producto">$ 60,00</li>
-                        <li>Ver producto</li>
-                    </ul>   
-                </div>
-                </a>
-            </div>
-            
-           
-            </div>
     
-        <div class="caja_2">
-            <h2>Agregar Productos</h2>
-            <div class="agregar roductos"> 
-               
+    <body >
+        <header class="cabezera">
+            <div class="logo">
+               <img class= "corazones"src="./img/image 1.svg" alt="corazones">              
+               <img class="AluraGeek" src="./img/AluraGeek.svg" alt="AluraGeek">
+            </div>      
+                    
+</header>
 
-            </div>
-        </div>
-        </main>
+
+    <section>
         
+        <div class="mis_productos">
+            <h2 >Mis productos</h2> 
+            <div class="block_principal" data-producto>
+                       
+            </div>    
+
+        
+        <div class="formulario">
+            
+            <form action="#" class="formulario_contenedor" data-form>
+                <fieldset>
+                    <legend class="title_addProducto">Agregar nuevo producto</legend>
+    
+    
+                    <div class="agregar__form__imagen">
+                        <div class="agregar__imagen-div" id="box__imagen"></div>
+                        <label for="input__imagen" class="input__image-label"> Elegir archivo</label>
+                        <input type="file" class="agregar__imagen input" id="input__imagen" data-input="imagen_agregar_producto" accept="image/*">
+                    </div>
+                    <div class="falta__carga__archivo">
+                        <span class="mensaje__error archivo__faltante">Debe seleccionar un archivo de imagen para cargar en el producto</span>
+                    </div>
+                    
+                    <div class="input-container top_limit">
+                        <input name="categoria" id="categoria" class="input" type="text" placeholder="Categoria" required data-tipo="categoria" pattern="[\s\S]{4,40}">
+                        <label class="input-label" for="categoria"></label>
+                        
+                    </div>
+                    <div class="input-container">
+                        <input name="nombreProducto" id="nombreProducto" class="input" type="text" placeholder="Nombre del producto" required data-tipo="nombre_prod" pattern="[\s\S]{4,20}">
+                        <label class="input-label" for="nombreProducto"></label>
+                        
+                    </div>
+                    <div class="input-container">
+                        <input name="precioProducto" id="precioProducto" class="input" type="text" placeholder="Precio del producto" required data-tipo="precio_prod" pattern="([$][0-9]).{1,100}">
+                        <label class="input-label" for="precioProducto"></label>
+                        
+                    </div>
+                    <div class="input-container">
+                        <input name="descripcionProducto" id="descripcionProducto" class="input_descripcion" type="text" placeholder="Descripción del producto" required data-tipo="descripcion_prod" pattern="[\s\S]{5,150}">
+                        <label class="input-label" for="descripcionProducto"></label>
+                        
+                    </div>
+                </fieldset>
+                <button type="submit" class="btn_agregar">Agregar producto</button>
+            </form>
           
-    <footer class="footer"> 
-        <div class="footer__icons">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-instagram"></i>
-        </div>
-        <p class="footer__text">Desarrollado por Oscar Bustos</p>
-    </footer>
-    <script src="https://kit.fontawesome.com/ef3eea8822.js" crossorigin="anonymous"></script>
-    <script src="./ejemplos/sincrono.js"></script>
+    </section>   
+    <script src="./js/index.js"></script>
+    <script src="./js/add_prod.js"></script>
 </body>
+<footer>
+    
+    <div class="logo">
+        <img class= "corazones"src="./img/image 1.svg" alt="corazones">              
+        <img class="AluraGeek" src="./img/AluraGeek.svg" alt="AluraGeek">
+     </div>
+     <p>Todos los derechos reservados &copy; 2024</p>
+</footer>
+    
 </html>
